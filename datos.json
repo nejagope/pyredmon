@@ -1,0 +1,16 @@
+[
+    {
+        "Nombre": "Julio Martínez",
+        "Departamento": "Guatemala",
+        "Edad": 25,
+        "Forma de contagio": "Comunitario",
+        "Estado": "Activo"
+    },
+    {
+        "Nombre": "Pedro Pérez",
+        "Departamento": "Chimaltenango",
+        "Edad": 65,
+        "Forma de contagio": "Comunitario",
+        "Estado": "Recuperado"
+    }
+]
