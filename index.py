@@ -18,6 +18,7 @@ MONGO_USER = os.environ['MONGO_USER']
 MONGO_PASSWORD = os.environ['MONGO_PASSWORD']
 MONGO_PORT = os.environ['MONGO_PORT']
 MONGO_DB_NAME = os.environ['MONGO_DB']
+MONGO_ITEMS_COLLECTION = os.environ['MONGO_ITEMS_COLLECTION']
 
 app = Flask(__name__)
 
@@ -39,7 +40,7 @@ def add():
 		#insert whole item in mongo items
 		client = pymongo.MongoClient('mongodb://%s:%s@%s:%s' %(MONGO_USER, MONGO_PASSWORD,MONGO_HOST, MONGO_PORT))		
 		db = client[MONGO_DB_NAME]
-		collection = db["items"]		
+		collection = db[MONGO_ITEMS_COLLECTION]		
 		x = collection.insert_one(item)							
 		return jsonify({"error": 0, "result": "OK"})	
 	
